@@ -4,7 +4,7 @@
   <head>Wumppa Page
   </head>
   <body style="background-image:url('Images/SeamlessBackground.jpg')">
-     <table style="width:80%">
+     <table style="width:50%">
       <tr>
         <th><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Linkedin</a></td>
         <th><a href="https://imgur.com/">Imgur</a></td>
@@ -27,13 +27,11 @@
       <li>Links</li>
       <li>Location</li>
     </ul>
-    <h3>We have pictures!</h3>
+    <h3>Pictures</h3>
     <img src="Images/Controller.jpg" alt="Controller" style="width:128px;height:128px;">
-    <p>There should be a picture here...</p>
-    
-    <h3>We have pictures!</h3>
+    <p>Image stored in git folder</p>
     <img src="Images/gamedesig.jpeg" alt="gameDesigg" style="width:192px;height:128px;">
-    <p>There should be a picture here...</p>
+    <p>Moar image from git folder!</p>
     
     
         <h2>Linked Image!</h2>
@@ -60,7 +58,7 @@
 var x = document.getElementById("demo");
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.watchPosition(showPosition);
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
@@ -68,16 +66,6 @@ function getLocation() {
 function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude; 
-}
-</script>
-<script>
-  function showPosition(position) {
-    var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-    "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_:KEY";
-
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
 </script>
 
