@@ -4,7 +4,7 @@
   <head>Wumppa Page
   </head>
   <body style="background-image:url('Images/SeamlessBackground.jpg')">
-     <table style="width:30%">
+     <table style="width:80%">
       <tr>
         <td><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Linkedin</a></td>
         <td><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Imgur</a></td>
@@ -17,8 +17,9 @@
     <ul>
       <li>Table</li>
       <li>Lists</li>
-      <ul>
       <li>Images</li>
+      <ul>
+      <li>Git Images</li>
       <li>Linked Images</li>
       </ul>
       <li>Tables</li>
@@ -55,7 +56,7 @@
     <h3> Self promotion, ahoy</h3>
     <a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Linkedin</a>
     
-    <script>
+   <script>
 var x = document.getElementById("demo");
 function getLocation() {
     if (navigator.geolocation) {
@@ -67,14 +68,6 @@ function getLocation() {
 function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude; 
-}
-          function showPosition(position) {
-    var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-    "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_:KEY";
-
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
 </script>
 
