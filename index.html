@@ -6,9 +6,9 @@
   <body style="background-image:url('Images/SeamlessBackground.jpg')">
      <table style="width:80%">
       <tr>
-        <td><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Linkedin</a></td>
-        <td><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Imgur</a></td>
-        <td><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Schoolpage</a></td>
+        <th><a href="https://www.linkedin.com/in/aleksi-kuusela-01515912a/">Linkedin</a></td>
+        <th><a href="https://imgur.com/">Imgur</a></td>
+        <th><a href="https://www.kamk.fi/fi">Schoolpage</a></td>
       </tr>
     </table>
     
@@ -70,7 +70,16 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude; 
 }
 </script>
+<script>
+  function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
 
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
+    "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_:KEY";
+
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+</script>
 
   </body>
 </html>
